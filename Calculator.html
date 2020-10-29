@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Calculator </title>
+    <!--For the Online Assessment : Calculator Code Test -->
+    <!--Name: Jobbie Yasaro -->
+    <script>
+        function add() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a + b;
+            document.getElementById('ansLabel').innerHTML = 'Solution: ' + a + ' + ' + b + ' = ';
+            document.getElementById("answer").value = c;
+        }
+
+        function minus() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a - b;
+            document.getElementById('ansLabel').innerHTML = 'Solution: ' + a + ' - ' + b + ' = ';
+            document.getElementById("answer").value = c;
+        }
+
+        function times() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a * b;
+            document.getElementById('ansLabel').innerHTML = 'Solution: ' + a + ' x ' + b + ' = ';
+            document.getElementById("answer").value = c;
+        }
+
+        function divide() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a / b;
+            document.getElementById('ansLabel').innerHTML = 'Solution: ' + a + ' / ' + b + ' = ';
+            document.getElementById("answer").value = c;
+        }
+
+        function squareRoot() {
+            var o, p;
+            o = Number(document.getElementById("answer").value);
+            p = Math.sqrt(o);
+            document.getElementById('labels').innerHTML = "square Root of " + o + " :";
+            document.getElementById("answer2").value = p;
+
+        }
+
+        function square() {
+            var o, p;
+            o = Number(document.getElementById("answer").value);
+            p = o * o;
+            document.getElementById('labels').innerHTML = 'Solution for ' + o + '&#178; ';
+            document.getElementById("answer2").value = p;
+
+        }
+    </script>
+</head>
+
+<style>
+    body {
+        background: #666;
+        text-align: center;
+    }
+    
+    .all-box {
+        width: 400px;
+        height: auto;
+        background: #333;
+        padding: 5px;
+        margin: 20px auto;
+        border-left: 10px solid rgb(250, 255, 176);
+        color: #eee;
+        box-shadow: 2px 2px rgb(244, 248, 193);
+        border-radius: 20px;
+    }
+    
+    .box,
+    .btn-box {
+        width: 100%;
+        display: flex;
+        margin: 10px 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    label {
+        width: 50%;
+    }
+    
+    input {
+        width: 50%;
+        padding: 5px 10px;
+        float: right;
+    }
+    
+    .btns {
+        width: 40%;
+        margin: 0 auto;
+    }
+    
+    button {
+        width: 50px;
+        height: 40px;
+        font-size: 20px;
+        background: #333;
+        color: #eee;
+        border-radius: 5px;
+        border: 1px solid #eee;
+        margin: 3px 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background: #eee;
+        color: #333;
+        border: #333;
+    }
+</style>
+
+<body>
+    <div class="all-box">
+        <h3>My Calculator</h3>
+        <div class="box">
+            <label> Enter First number : </label>
+            <input id="first">
+        </div>
+        <div class="box">
+            <label for="">Enter Second number: </label>
+            <input id="second">
+        </div>
+        <div class="btn-box">
+            <label> Select Operation: </label>
+            <div class="btns">
+                <button onclick="add()"> + </button>
+                <button onclick="minus()"> - </button>
+                <button onclick="times()"> x </button>
+                <button onclick="divide()"> / </button>
+            </div>
+        </div>
+        <div class="box">
+            <label id="ansLabel" for="">Ans: </label>
+            <input id="answer">
+        </div>
+        <div class="btn-box">
+            <label> Select Operation: </label>
+            <div class="btns">
+                <button class="exbtn" onclick="squareRoot()">sqrt</button>
+                <button class="exbtn" onclick="square()">x&#178;</button>
+            </div>
+        </div>
+
+        <div class="box">
+            <label id="labels" for="answer2"></label>
+            <input id="answer2">
+        </div>
+    </div>
+</body>
+
+</html>
